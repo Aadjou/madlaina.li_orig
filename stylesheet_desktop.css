@@ -1,0 +1,286 @@
+@charset "UTF-8";
+/* Mein Farbschema
+Main 	Lightgreen: #7CB428 rgba(124,180, 40, 1)
+		Green:		#2A6A29	rgba(115,39,67,1)
+		Brown		#474335 rgba(71,67,53,1)
+		DarkBlue	#186373	rgba(24, 99, 115, 1)
+		LightBlue	#B8D1BE	rgba(184,209,190, 1)
+Cont	DarkMagenta	#732743 rgba(115, 39, 67, 1)
+
+new:	Olive		#796E24 rgba(121, 110, 36, 1)
+		Beige		#F9DF8D	rgba(249, 223, 141, 1)
+		light Or.	#EE9C21 rgba(238, 156, 33, 1)
+		Orange		#EA7D24	rgba(234, 125, 36, 1)
+		Dark Or.	#A34E24 rgba(163, 78, 36, 1)
+ */
+* {
+	margin : 0px;
+	padding: 0px;
+	text-align:center;
+}
+ @media only screen and (max-width: 799px) {
+body {
+	background: #b5b5b3 url(img/bgTest.png) no-repeat;
+	background-size: 100%;
+	background-attachment:fixed;
+	background-position:bottom left;
+}
+}
+ @media only screen and (min-width: 800px) {
+body {
+	background: #b5b5b3 url(img/bgTest.png) no-repeat;
+	background-attachment:fixed;
+	background-position:bottom left;
+}
+}
+body,td,th 
+{
+	/*color: #FFFFFF;*/ 
+	color: rgba (0,0,0, 0.40);
+	font-family: "Univers LT Std 45 Light", Helvetica, Arial, monospace;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	right: 22.2%;
+	height:25px;
+	width:44.4%;
+	/*min-width: 400px;*/
+	background:rgba(170,170,170,1);
+}
+nav>ul{
+	margin:auto;
+	height:25px;
+	width: 66.6%;
+	min-width: 400px;
+}
+nav li{
+	list-style-type:none;
+	height:100%;
+}
+
+nav>ul>li{
+	width: 20%;
+	top:0px;
+	display: inline-block;
+}
+nav>ul>li a{
+	color: rgba(238,238,238,1);
+	background:rgba(102,153,0,1);
+	margin-right:5px;
+	border-bottom-right-radius:20px;
+	border-top-left-radius:20px;
+	height: 100%;
+	width: 100%;
+	display: inline-block;
+}
+nav>ul>li a:hover{
+	background-color:rgba(150,200,0,1);
+}
+nav>ul>li>ul {
+
+	position:absolute;
+	top: 25px;
+	width:30%;
+	display:none;
+	background:rgba(0,255,0,1);
+	/*==???*/
+}
+#wrapper {
+	position: static;
+	float:right;
+	margin-right:22.2%;
+	margin-top: 25px;
+	/*right: 22.2%;	min-width: 400px;*/
+	width: 44.4%;
+	min-height:100%;
+	background:rgba(227,227,227,0.5);
+}
+#sidebar {
+	position:relative;
+	width: 25%;
+	min-width:140px;
+	background:rgba(170,170,170,1);
+	right: -100%;
+	top: 50px;
+}
+#sidebar >ul{
+	display:inline-block;
+}
+#sidebar >ul:first-child > li{
+	background:rgba(51,255,204,1);
+}
+#sidebar > ul >li {
+	list-style:none;
+	min-height: 30px;
+	margin: 5%;
+}
+header {
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+}
+
+.contentText{
+	/* bg context box*/
+	background:rgba(225,255,231,0.1);
+	padding:40px;
+}
+.gallery>ul {
+	height: 22.145%;
+	/*background:rgba(0,102,51,1);*/
+	padding-bottom: 3%;
+	padding-top:0%;
+	width: 200%;
+	margin-left: -50%;
+}
+
+.gallery > ul > li {
+	width: 16.66%;
+	display:inline-block;
+	margin : 0px;
+	padding: 0px;
+}
+
+/*setting up project details button*/
+.gallery > ul  .projektlink {
+	display: none;	/*hide it until we want to see it*/
+	position: absolute;	/*stick it to the right border of the screen*/
+	right: 0;			/*stick it to the right border of the screen*/
+	background-color: #669900;
+	width: 28px;
+	height: 100px;
+	border-bottom-right-radius: 98px;
+	border-top-left-radius: 100px;
+}
+
+/*show project details button when hovering over the corresponding UL*/
+.gallery > ul:hover .projektlink {
+	display:block;
+}
+
+/*the last li entry in the gallery UL is the project details button anchor*/
+.gallery > ul>li:last-child {
+	width: 0;	/* no width so that it doesnt mess up the gallery */
+	float: right; /*float right so that i stays on the right height*/
+}
+ @media only screen and (max-width: 799px) {
+.gallery > ul .projektlink {
+	display: block;
+	position: auto;
+}
+.gallery > ul>li:last-child {
+	width: 100%;
+	float: none;
+	height: 100px;
+}
+}
+
+
+.contentText>ul>li:first-child{
+	width:15%;
+	float:left;
+}
+
+
+.gallery > ul > li >img, .gallery>ul>li>a>img{
+	height: 100%;
+	width: 100%;
+}
+
+
+.contentText>ul>li{
+	width:75%;
+	display:inline-block;
+	text-align:left;
+	list-style-type:none;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	/* col headers */
+	/*color: #F05B4F;*/
+	color:rgba(102,153,0,1);
+	/*color: rgba(150,200,0,1);*/
+	text-align: center;
+	font-size: 12px;
+	padding: 30px;
+}
+
+h1
+{
+	font-size: 3em;
+}
+
+h2
+{
+	font-size: 2.5em;
+}
+
+h3
+{
+	font-size: 2em;
+}
+
+h4
+{
+	font-size: 1.5em;
+}
+h5{
+	font-size: 1em;
+}
+h6{
+	font-size: 0.8em;
+	text-align:left;
+	padding:0px;
+}
+
+a {
+	color:rgba(255,255,255,1);
+	text-decoration: none;
+}
+
+#sb-player {
+
+left: 0;
+
+top:0;
+
+}
+
+#sb-title, #sb-title-inner {height: auto;}
+
+
+/* quick mobile fix*/
+@media all and (max-width: 650px) {
+body {
+	background: #b5b5b3;
+}
+#wrapper {
+	margin: 25px 5%;
+	float: none;
+	width: 90%;
+}
+nav {
+	/*margin: 0px 0%;*/
+	float: none;
+	width: 90%;
+}
+#sidebar {
+	display: none;
+}
+.contentText>ul>li{
+	width:55%;
+	display:inline-block;
+	text-align:left;
+	list-style-type:none;
+}
+.contentText>ul>li:first-child{
+	width:35%;
+	float:left;
+	/* bg cv*/
+	/*background: rgba(255,255,255,0.1);*/
+}
+}
